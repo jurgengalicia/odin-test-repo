@@ -8,11 +8,9 @@
   </head>
   <body>
     <p>This is my page</p>
-    <form action="">
+    <form>
       <h1>payment form</h1>
-      <p>
-        required fields are followed by <strong><span aria-label="required">*</span></strong>
-      </p>
+      <p>required fields are followed by <strong><span aria-label="required">*</span></strong></p>
       <section>
         <h2>Contact information</h2>
         <fieldset>
@@ -58,6 +56,38 @@
             <strong><span aria-label="required">*</span></strong>
           </label>
           <input type="password" id="pwd" name="password" />
+        </p>
+      </section>
+      <section>
+        <h2>payment information</h2>
+        <p>
+          <label for="card">
+            <span>card type</span>
+          </label>
+          <select name="usercard" id="card">
+            <option value="visa">visa</option>
+            <option value="mc">mastercard</option>
+            <option value="amex">american express</option>
+          </select>
+        </p>
+        <p>
+          <label for="number">
+            <span>card number:</span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input type="tel" name="cardnumber" id="number"/>
+        </p>
+        <p>
+          <label for="expiration">
+            <span>expiration date:</span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+        </p>
+      </section>
+      <section>
+        <p>
+          <button type="submit">validate the payment</button>
         </p>
       </section>
     </form>
