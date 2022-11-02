@@ -47,3 +47,7 @@ h1{
 #reply{
   display: flex;
 }
+
+label{
+  font: 0.8em "typewriter", sans-serif;
+}
