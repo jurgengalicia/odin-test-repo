@@ -1,101 +1,26 @@
-@font-face {
-  font-family: "handwriting";
-  src: url("fonts/Journal.woff2") format("woff2") url("fonts/Journal.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+form {
+  font: 1em sans-serif;
+  max-width: 320px;
 }
 
-@font-face {
-  font-family: "typewriter";
-  src: url("fonts/MomsTypewriter.woff2") format("woff2") url("fonts/MomsTypewriter.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body{
-  font: 1.3em sans-serif;
-  padding: 0.5rem;
-  margin: 0;
-  background: #222;
-}
-
-form{
-  position: relative;
-  width: 740px;
-  height: 498px;
-  margin: 0 auto;
-  padding: 1em;
-  box-sizing: border-box;
-  background: #fff url(background.jpg);
-
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10em 1em 1em 1em;
-}
-
-h1{
-  font: 1em "typewriter", monospace;
-  align-self: end;
-}
-
-#message{
-  grid-row: 1/5;
-}
-
-#from,
-#reply{
-  display: flex;
-}
-
-label{
-  font: 0.8em "typewriter", sans-serif;
-}
-
-input,textarea{
-  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border: none;
-  padding: 0 10px;
-  margin: 0;
-  width: 80%;
-  background: none;
-}
-
-input:focus,
-textarea:focus{
-  background: rgba(0,0,0,0.1);
-  border-radius: 5px;
-}
-
-textarea{
+p > label {
   display: block;
-  padding: 10px;
-  margin: 10px 0 0 -10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
   width: 100%;
-  height: 90%;
-
-  border-right: 1px solid;
-
-  overflow: auto;
+  border: 1px solid #333;
+  box-sizing: border-box;
 }
 
-button{
-  padding: 5px;
-  font:bold 0.6em sans-serif;
-  border: 2px solid #333;
-  border-radius: 5px;
-  background: none;
-  cursor: pointer;
-  transform: rotate(-1.5deg);
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
 }
 
-button:after{
-  content: ">>>";
-}
-
-button:hover,
-button:focus{
-  outline: none;
-  background: #000;
-  color:#fff;
+input:focus:invalid {
+  box-shadow: none;
 }
