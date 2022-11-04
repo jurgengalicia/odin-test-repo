@@ -3,31 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Postcard example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Favorite fruit start</title>
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:invalid:required{
+        background-image: linear-gradient(to right, pink, lightgreen);
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
   </head>
 
 <body>
-  <form>
-    <h1>to: Mozilla</h1>
-    <div id="from">
-      <label for="name">from:</label>
-      <input type="text" id="name" name="user_name"/>
-    </div>
-
-    <div id="reply">
-      <label for="mail">reply:</label>
-      <input type="email" id="mail" name="user_email"/>
-    </div>
-
-    <div id="message">
-      <label for="msg">Your Message:</label>
-      <textarea name="user_message" id="msg"></textarea>
-    </div>
-    <div class="button">
-      <button type="submit">Send your Message</button>
-    </div>
-  </form>
+    <form>
+      <label for="choose">Would you prefer a banana or a cherry?</label>
+      <input id="choose" required name="i_like">
+      <button>Submit</button>
+    </form>
 </body>
 
 </html>
