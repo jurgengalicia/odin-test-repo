@@ -21,9 +21,17 @@
 
 <body>
     <form>
-      <label for="choose">Would you prefer a banana or a cherry?</label>
-      <input id="choose" required name="i_like" pattern="[Bb]anana|[Cc]herry"/>
-      <button>Submit</button>
+      <div>
+        <label for="choose"> banana or cherry</label>
+        <input type="text" id="choose" name="i-like" required maxlength="6" minlength="6">
+      </div>
+      <div>
+        <label for="number">how many</label>
+        <input type="number" id="number" name="amount" value="1" min="1" max="10"/>
+      </div>
+      <div>
+        <button>submit</button>
+      </div>
     </form>
 </body>
 
