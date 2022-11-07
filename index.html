@@ -24,11 +24,11 @@
       <ul>
         <li>
           <label for="uname">User name:</label>
-          <input required minlength="5" maxlength="20" type="text" name="uname" id="uname">
+          <input required minlength="5" maxlength="20" type="text" name="uname" id="uname" pattern="[a-z]\.[a-z]{3,}">
         </li>
         <li>
           <label for="email">Email address:</label>
-          <input required type="email" name="email" id="email">
+          <input required type="email" name="email" id="email" pattern="[a-zA-Z\d]{1,}(@bigcorp.eu)">
         </li>
         <li>
           <label for="phone">Phone number:</label>
