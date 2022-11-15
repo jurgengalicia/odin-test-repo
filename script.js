@@ -6,7 +6,7 @@ childP.textContent = "Hey I'm red!";
 childP.style.color = "red"
 
 let childH3 = document.createElement('h3');
-childH3.textContent = "I'm a blue H3!";
+childH3.textContent = "I'm a blue H3s!";
 childH3.style.color = "blue"
 
 let childDiv = document.createElement('div');
